@@ -1,0 +1,391 @@
+@charset "UTF-8";
+/**
+
+ *
+ * @authors Your Name (you@example.org)
+ * @date    2016-12-11 13:26:37
+ * @version $Id$
+ */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre,
+address, caption, cite, code, dfn, em, strong, table, thead, tbody, th, var, form, fieldset, input, textarea, p, blockquote, th, td {
+    font-weight: normal;
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+}
+*,
+::before,
+::after{
+    padding: 0;
+    margin: 0;
+
+    /*在移动端特殊的设置*/
+    /*清除点击高亮效果*/
+    -webkit-tap-highlight-color: transparent;
+    /*设置所有的盒子的宽度以边框开始计算*/
+    -webkit-box-sizing: border-box;
+    /*要兼容 webkit 浏览器内核厂商 这种情况一般是老的移动端浏览器*/
+    box-sizing: border-box;
+}
+html,body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: #333;
+    font-family: "MicroSoft YaHei","sans-serif";/*是设备默认的字体*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-size: 100%;
+}
+
+q:before, q:after {
+    content: '';
+}
+
+fieldset, img {
+    border: 0;
+}
+
+abbr, acronym {
+    border: 0;
+}
+
+caption, th {
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+/*body{font-size: 14px;font-family: "微软雅黑";min-width: 1200px;}*/
+i {
+    font-style: normal;
+}
+
+b {
+    font-weight: normal;
+}
+
+ins {
+    text-decoration: none;
+}
+
+/*通用样式*/
+/*body{min-width: 1200px;}*/
+a:link, a:visited {
+    text-decoration: none;
+    color: #6a6a6a;
+}
+
+a:hover {
+    color: #ffba00;
+    text-decoration: none;
+}
+
+/*.wrapper {width:1200px; margin:0 auto; min-width:1200px; max-width: 1200px;}*/
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.in-block {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+.por {
+    position: relative;
+}
+
+.poa {
+    position: absolute;
+}
+
+.pof {
+    position: fixed;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.bk {
+    border: .03rem solid red;
+}
+/*底部*/
+footer{
+    margin: 0 auto;
+    padding: 0 0.34rem;
+    width: 100%;
+    position: absolute;
+	margin-top:1rem;
+    bottom: 0.55rem;
+    text-align: center;
+
+
+
+}
+footer a{
+    font-size: 0.3rem;
+    display: inline-block;
+    margin-bottom: 0.4rem;
+}
+footer div{
+    width: 100%;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 0.32rem;
+    background: #900;
+    line-height: 0.8rem;
+    color: #ffffff;
+    border-radius: 0.1rem;
+}
+
+/*头部*/
+header{
+    /*font-weight: bold;*/
+    position: relative;
+    width: 100%;
+    height: 0.8rem;
+    line-height:0.8rem;
+    background: #900;
+    color: white;
+    font-size: 0.3rem;
+    /*text-align: center;*/
+}
+.icon{
+	 font-weight:400;
+    font-size: 0.5rem;
+    line-height:0.8rem;
+    position: absolute;
+    left: 0.4rem;
+    top: 0;
+    color: white;
+
+}
+
+.title{
+    font-weight:400;
+    text-align: center;
+  /*   padding-left: 0.87rem; */
+   }
+   #tel{
+   position: absolute;
+   right: 0.4rem;
+   top: 0.1rem;
+   width:0.4rem;
+   height:0.4rem;
+   }
+   #tel img{
+
+   width:100%;
+   height:100%;
+   }
+
+
+
+/*!*返回顶部*!
+.goTopBtn,#goTopBtn{
+    position: fixed;
+    !*line-height: 0.7px;*!
+    height: 0.8rem;
+    width: 0.8rem;
+    bottom: 0.7rem;
+    right: 0.24rem;
+    font-size: 1rem;
+     opacity: 0.9;
+    !*height: 0.7px;*!
+    cursor: pointer;
+    display: none;
+    background: url("../images/top.png") no-repeat;
+    background-size: 100%;
+}*/
+
+/*遮罩*/
+.shade {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: black;
+    opacity: 0.3;
+    z-index: 10000;
+}
+
+.shade img {
+    position: fixed;
+    width: 1.2rem;
+    height: 1.2rem;
+    top: 4rem;
+    left: 50%;
+    margin-left: -0.6rem;
+    /*opacity: 0.5;*/
+}
+/*隐藏站长之家*/
+a[title="站长统计"]{
+    display:none
+}
+/* 弹框样式 */
+   .alert-shade {
+        display: none;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0, 0, 0.3);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 50;
+    }
+
+    .alert-box,.code-box{
+        display: none;
+        width: 4.36rem;
+        min-height:1.86rem;
+        border-radius: 0.2rem;
+        font-family: "MicroSoft YaHei", "sans-serif";
+        position: absolute;
+        z-index: 100;
+        box-shadow: rgba(0, 0, 0, 0.298039) 0.01rem 0.01rem 0.5rem 0;
+        background: white;
+       	left:50%;
+        top:30%;
+     	margin-left:-2.18rem;
+
+
+    }
+
+    .in {
+        -webkit-animation: layer-bounceIn 0.2s both;
+        animation: layer-bounceIn 0.1s both;
+    }
+
+    .close {
+        -webkit-animation: layer-bounceOut 0.2s both;
+        animation: layer-bounceOut 0.1s both;
+    }
+    @-webkit-keyframes layer-bounceOut {
+        100% {
+            opacity: 0;
+            -webkit-transform: scale(.7);
+            transform: scale(.7)
+        }
+        30% {
+            -webkit-transform: scale(1.05);
+            transform: scale(1.05)
+        }
+        0% {
+            -webkit-transform: scale(1);
+            transform: scale(1)
+        }
+    }
+    @keyframes layer-bounceOut {
+        100% {
+            opacity: 0;
+            -webkit-transform: scale(.7);
+            -ms-transform: scale(.7);
+            transform: scale(.7)
+        }
+        30% {
+            -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+            transform: scale(1.05)
+        }
+        0% {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1)
+        }
+    }
+    @-webkit-keyframes layer-bounceIn {
+        0% {
+            opacity: 0;
+            -webkit-transform: scale(.8);
+            -ms-transform: scale(.8);
+            transform: scale(.8)
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1)
+        }
+    }
+    @keyframes layer-bounceIn {
+        0% {
+            opacity: 0;
+            -webkit-transform: scale(.8);
+            -ms-transform: scale(.8);
+            transform: scale(.8)
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1)
+        }
+    }
+
+    .alert-context {
+        font-size: 0.24rem;
+        text-align: center;
+        margin-top:0.38rem;
+        padding: 0 0.2rem;
+        width: 100%;
+        line-height:0.35rem;
+        min-height: 0.72rem;
+
+    }
+
+    .alert-sure,.code-sure,.closed{
+        margin: 0 auto;
+        text-align: center;
+		color:#FA3D3D;
+        margin-top: 0.1rem;
+        margin-bottom: 0.2rem;
+        width: 0.96rem;
+        height: 0.46rem;
+        line-height: 0.42rem;
+        border-radius: 0.1rem;
+        /*box-shadow: rgba(0, 0, 0, 0.298039) 0 0 5px ;*/
+        font-size: 0.28rem;
+        border: 1px solid #fa3b4a;
+
+    }
+.code-box .base {
+    position: relative;
+    width: 100%;
+    height: 0.76rem;
+}
+.code-box .code-sure{
+    position: absolute;
+    top: 0rem;
+    left: 0.9rem;
+}
+.code-box .closed{
+    position: absolute;
+    top: 0rem;
+    right: 0.9rem;
+    color: #8B8D8C;
+    border: 1px solid #8B8D8C;
+}
